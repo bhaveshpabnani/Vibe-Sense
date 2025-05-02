@@ -1,0 +1,674 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Deloitte Theme Colors */
+:root {
+  --deloitte-green: #86BC25;
+  --deloitte-dark-green: #006A4D;
+  --deloitte-black: #000000;
+  --deloitte-dark-blue: #0076A8;
+  --deloitte-light-blue: #41B6E6;
+  --deloitte-purple: #812990;
+  --deloitte-yellow: #FFCD00;
+  --deloitte-red: #E0301E;
+  --deloitte-gray: #5F5F5F;
+  --deloitte-light-gray: #E0E0E0;
+  
+  /* Additional UI Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F8F8;
+  --text-primary: #2D2D2D;
+  --text-secondary: #5F5F5F;
+  --border-color: #DDDDDD;
+}
+
+/* Apply Deloitte Theme to Dashboard */
+.h-full.min-h-screen.bg-muted\/30 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Headers and Text */
+.text-lg.font-medium, .text-xl, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Univers LT Std', 'Arial', sans-serif !important;
+  color: var(--deloitte-black) !important;
+}
+
+.text-muted-foreground {
+  color: var(--text-secondary) !important;
+}
+
+/* Cards styling */
+.glass-card {
+  background-color: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Primary buttons */
+.bg-primary {
+  background-color: var(--deloitte-green) !important;
+}
+
+.text-primary {
+  color: var(--deloitte-green) !important;
+}
+
+.bg-secondary {
+  background-color: var(--deloitte-dark-blue) !important;
+}
+
+/* Table styling */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+thead th {
+  background-color: var(--deloitte-light-gray) !important;
+  color: var(--deloitte-black) !important;
+  font-weight: bold !important;
+}
+
+tbody tr:hover {
+  background-color: rgba(134, 188, 37, 0.05) !important;
+}
+
+/* Status tags */
+.bg-blue-100 {
+  background-color: rgba(65, 182, 230, 0.2) !important;
+}
+
+.text-blue-800 {
+  color: var(--deloitte-dark-blue) !important;
+}
+
+.bg-yellow-100 {
+  background-color: rgba(255, 205, 0, 0.2) !important;
+}
+
+.text-yellow-800 {
+  color: #B3820C !important;
+}
+
+/* Modern homepage styling from Deloitte */
+.modern-homepage {
+  font-family: 'Univers LT Std', 'Arial', sans-serif !important;
+}
+
+/* Login page styles */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.font-sans {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.left-6 {
+  left: 1.5rem;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-blue-600 {
+  border-color: #2563eb;
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #1d4ed8;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.border-l {
+  border-left-width: 1px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #f3f4f6;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.-translate-y-1\/2 {
+  transform: translateY(-50%);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Navigation tabs */
+button.border-b {
+  transition: all 0.3s ease;
+  border-bottom-color: transparent;
+}
+
+button.border-b:hover {
+  color: #2563eb;
+}
+
+button.border-b.border-blue-600 {
+  font-weight: 500;
+}
+
+/* Form field styles */
+.form-field {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.form-field__label {
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.form-field input:focus ~ .form-field__label,
+.form-field input:valid ~ .form-field__label {
+  top: 0.25rem !important;
+  font-size: 0.75rem !important;
+  color: #2563eb;
+}
+
+.form-field input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.form-field .bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.form-field input:focus ~ .bar {
+  background-color: #2563eb;
+}
+
+/* Checkbox styles */
+.checkbox {
+  position: relative;
+}
+
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.checkbox input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Site language dropdown styles */
+.site-language-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.site-language-dropdown .icon-chevron-down {
+  font-size: 10px;
+}
+
+/* Make sure background image doesn't scale with zoom */
+@media screen and (min-width: 768px) {
+  .bg-cover.bg-center.bg-no-repeat {
+    background-attachment: fixed;
+  }
+}

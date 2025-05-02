@@ -1,0 +1,329 @@
+{
+    "tree_name": "Engagement Deficit Assessment",
+    "root_question": {
+      "question_id": "B.11",
+      "question_text": "At work, how often do you become absorbed in what you are doing?",
+      "answer_options": ["Scale 1-10, where 1 is 'Never' and 10 is 'Always'"],
+      "branches": [
+        {
+          "if_answers": ["1", "2", "3"],
+          "next_question": {
+            "question_id": "D.1",
+            "question_text": "I find that my values and the organisation's values are very similar",
+            "answer_options": [
+              "1. Strongly agree",
+              "2. Agree",
+              "3. Neither agree nor disagree",
+              "4. Disagree",
+              "5. Strongly disagree"
+            ],
+            "branches": [
+              {
+                "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                "next_question": {
+                  "question_id": "D.4",
+                  "question_text": "I understand how my work contributes to my organisation's objectives",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                      "next_question": {
+                        "question_id": "D.5",
+                        "question_text": "You know what is expected of you at work",
+                        "answer_options": [
+                          "1. Always",
+                          "2. Most of the time",
+                          "3. Sometimes",
+                          "4. Rarely", 
+                          "5. Never"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. Rarely", "5. Never"],
+                            "next_question": {
+                              "question_id": "D.2",
+                              "question_text": "I would recommend my organisation as a great place to work",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                                  "outcome": "Flag low organizational commitment and role clarity issues"
+                                },
+                                {
+                                  "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                                  "outcome": "Misalignment may be role-based rather than organization-based"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                            "next_question": {
+                              "question_id": "D.9",
+                              "question_text": "Your job gives you the feeling of work well done",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Rarely", "5. Never"],
+                                  "outcome": "Flag lack of intrinsic motivation despite role clarity"
+                                },
+                                {
+                                  "if_answers": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                                  "outcome": "Engagement may be improving; focus on value alignment"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                      "next_question": {
+                        "question_id": "D.12",
+                        "question_text": "I get opportunity to give to, or help others - either through work or volunteering",
+                        "answer_options": [
+                          "1. Always",
+                          "2. Most of the time",
+                          "3. Sometimes",
+                          "4. Rarely",
+                          "5. Never"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. Rarely", "5. Never"],
+                            "next_question": {
+                              "question_id": "B.10",
+                              "question_text": "At work, how often do you feel joyful?",
+                              "answer_options": ["Scale 1-10, where 1 is 'Never' and 10 is 'Always'"],
+                              "branches": [
+                                {
+                                  "if_answers": ["1", "2", "3"],
+                                  "outcome": "Flag emotional disengagement despite understanding contribution"
+                                },
+                                {
+                                  "if_answers": ["4", "5", "6", "7", "8", "9", "10"],
+                                  "outcome": "Potential for re-engagement through more meaningful connections"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                            "outcome": "Engagement improving via contribution and helping others"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                "next_question": {
+                  "question_id": "D.8",
+                  "question_text": "Considering all my efforts and achievements, I receive the praise and respect that my work deserves",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                      "next_question": {
+                        "question_id": "D.10",
+                        "question_text": "How often do you achieve the important work goals you have set for yourself?",
+                        "answer_options": ["Scale 1-10, where 1 is 'Never' and 10 is 'Always'"],
+                        "branches": [
+                          {
+                            "if_answers": ["1", "2", "3", "4"],
+                            "next_question": {
+                              "question_id": "D.7",
+                              "question_text": "The organisation I work for motivates me to give my best job performance",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                                  "outcome": "Motivational deficit from leadership despite value alignment"
+                                },
+                                {
+                                  "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                                  "outcome": "Mismatch in expectations and support; focus on skill development"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["5", "6", "7", "8", "9", "10"],
+                            "outcome": "Personal performance may not be recognized despite goal achievement"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                      "next_question": {
+                        "question_id": "NA",
+                        "question_text": "Do you feel you have adequate resources and support to perform at your best?",
+                        "answer_options": [
+                          "1. Yes, definitely",
+                          "2. Somewhat",
+                          "3. No, not really"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["3. No, not really"],
+                            "outcome": "Low engagement despite recognition; resource constraints may be the issue"
+                          },
+                          {
+                            "if_answers": ["1. Yes, definitely", "2. Somewhat"],
+                            "outcome": "Low engagement despite recognition and resources; burnout or personal factors may be relevant"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_answers": ["4", "5", "6", "7", "8", "9", "10"],
+          "next_question": {
+            "question_id": "I.9",
+            "question_text": "Do you feel too tired after work to enjoy things you like at home?",
+            "answer_options": [
+              "1. Never",
+              "2. Hardly ever",
+              "3. Sometimes",
+              "4. Often",
+              "5. Always"
+            ],
+            "branches": [
+              {
+                "if_answers": ["4. Often", "5. Always"],
+                "next_question": {
+                  "question_id": "B.4",
+                  "question_text": "During the last 12 months, have you felt unwell due to work-related stress?",
+                  "answer_options": [
+                    "Yes",
+                    "No"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["Yes"],
+                      "next_question": {
+                        "question_id": "B.6",
+                        "question_text": "I have felt calm and relaxed",
+                        "answer_options": ["Scale 0-5, where 0 is 'Never' and 5 is 'Always'"],
+                        "branches": [
+                          {
+                            "if_answers": ["0", "1", "2"],
+                            "next_question": {
+                              "question_id": "E.2",
+                              "question_text": "I might lose my job in the next 6 months",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["1. Strongly agree", "2. Agree"],
+                                  "outcome": "Over-engagement driven by job insecurity; burnout risk"
+                                },
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree", "4. Disagree", "5. Strongly disagree"],
+                                  "outcome": "Over-engagement and stress likely workload-related; burnout risk"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["3", "4", "5"],
+                            "outcome": "Moderate well-being despite stress; monitor engagement-stress balance"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["No"],
+                      "next_question": {
+                        "question_id": "G.1",
+                        "question_text": "I have an acceptable workload",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                            "outcome": "Workload balance needed; potential future burnout risk despite high engagement"
+                          },
+                          {
+                            "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                            "outcome": "Fatigue without workload or stress issues; potential personal factors or recovery needs"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answers": ["1. Never", "2. Hardly ever", "3. Sometimes"],
+                "next_question": {
+                  "question_id": "I.10",
+                  "question_text": "How satisfied are you with the balance between your work and life?",
+                  "answer_options": ["Scale 1-10, where 1 is 'Extremely dissatisfied' and 10 is 'Extremely satisfied'"],
+                  "branches": [
+                    {
+                      "if_answers": ["1", "2", "3", "4", "5"],
+                      "outcome": "Work-life imbalance despite engagement; monitor for future disengagement"
+                    },
+                    {
+                      "if_answers": ["6", "7", "8", "9", "10"],
+                      "outcome": "No engagement issue detected; healthy engagement with good work-life balance"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

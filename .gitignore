@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+// ... existing code ...
+
+# Ignore node_modules and other folders from Eliza and Eliza-Starter directories
+agent/Eliza/eliza/node_modules/
+agent/Eliza/eliza/dist/
+agent/Eliza-Starter/eliza-starter/node_modules/
+agent/Eliza-Starter/eliza-starter/dist/
+node_modules/
+dist
+dist-ssr
+*.local
+.firebase
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+venv/

@@ -1,0 +1,582 @@
+/* Deloitte Theme for Dashboard */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+.modern-homepage {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #262626;
+  background-color: #f3f3f3;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+.modern-homepage button {
+  transition: all 0.3s ease;
+}
+
+.modern-homepage button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout Styling */
+.modern-homepage .flex-col.h-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.modern-homepage .flex-1.overflow-y-auto {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-bottom: 4rem; /* Extra padding at the bottom to ensure content isn't hidden behind the footer */
+}
+
+/* Fixed Header and Footer */
+.modern-homepage header,
+.modern-homepage .h-16.border-t.fixed {
+  transition: padding-left 0.2s ease, left 0.2s ease, width 0.2s ease;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Dynamic sidebar adjustments */
+@media (min-width: 768px) {
+  .modern-homepage header,
+  .modern-homepage .h-16.border-t.fixed {
+    width: calc(100% - var(--sidebar-width, 64px));
+    left: var(--sidebar-width, 64px);
+  }
+  
+  /* Ensure footer is properly positioned at the bottom */
+  .modern-homepage .h-16.border-t.fixed {
+    bottom: 0;
+  }
+}
+
+/* Container adjustments for header and footer */
+.modern-homepage .container,
+.modern-homepage .flex-1.px-6 {
+  transition: width 0.2s ease, padding 0.2s ease;
+}
+
+/* Table Enhancements */
+.modern-homepage table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modern-homepage th {
+  background-color: #86BC25;
+  color: white;
+  font-weight: 500;
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.modern-homepage tr:hover td {
+  background-color: rgba(134, 188, 37, 0.05);
+}
+
+.modern-homepage td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eaeaea;
+  transition: background-color 0.2s ease;
+}
+
+/* Status Indicators */
+.status-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-completed {
+  background-color: rgba(134, 188, 37, 0.15);
+  color: #86BC25;
+}
+
+.status-pending {
+  background-color: rgba(255, 153, 0, 0.15);
+  color: #FF9900;
+}
+
+.status-overdue {
+  background-color: rgba(237, 28, 36, 0.15);
+  color: #ED1C24;
+}
+
+/* Mood Indicators */
+.mood-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.mood-indicator:hover {
+  transform: scale(1.02);
+}
+
+.mood-great {
+  background-color: rgba(134, 188, 37, 0.1);
+  border-left: 4px solid #86BC25;
+}
+
+.mood-good {
+  background-color: rgba(0, 145, 218, 0.1);
+  border-left: 4px solid #0091DA;
+}
+
+.mood-neutral {
+  background-color: rgba(133, 133, 133, 0.1);
+  border-left: 4px solid #858585;
+}
+
+.mood-concerned {
+  background-color: rgba(255, 153, 0, 0.1);
+  border-left: 4px solid #FF9900;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* FAQ Accordion */
+.faq-item {
+  border-bottom: 1px solid #eaeaea;
+  padding: 16px 0;
+}
+
+.faq-question {
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-top: 12px;
+}
+
+/* Deloitte Green Text */
+.text-deloitte-green {
+  color: #86BC25;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 16px;
+  }
+}
+
+/* Deloitte style card headers */
+.modern-homepage h3.text-lg.font-medium {
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* Feedback status tags */
+.modern-homepage .inline-flex.items-center.px-2\.5.py-0\.5.rounded-full {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Table enhancements */
+.modern-homepage table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.modern-homepage table th {
+  padding: 12px 16px;
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: #000000;
+  border-bottom: 2px solid #86BC25;
+}
+
+.modern-homepage table td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+.modern-homepage tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.modern-homepage tbody tr:hover {
+  background-color: rgba(134, 188, 37, 0.05);
+}
+
+/* FAQ accordion section */
+.modern-homepage .bg-muted\/40 {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  transition: background-color 0.2s ease;
+}
+
+.modern-homepage .bg-muted\/40:hover {
+  background-color: #f9f9f9;
+}
+
+.modern-homepage .bg-muted\/60 {
+  background-color: #f5f5f5;
+}
+
+/* Chat section */
+.modern-homepage .h-\[600px\] {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Floating chat box */
+#chat-section {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  z-index: 100;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chat-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure content below has enough padding to not be hidden by floating chat */
+.container.py-6.space-y-6 {
+  padding-bottom: calc(6rem + 20px);
+}
+
+/* Statistics on Dashboard */
+.modern-homepage .bg-primary\/10 {
+  background-color: rgba(134, 188, 37, 0.1);
+  border-left: 3px solid #86BC25;
+}
+
+/* Mood indicators */
+.modern-homepage [style*="--mood-happy"] {
+  background-color: #86BC25 !important;
+}
+
+.modern-homepage [style*="--mood-neutral"] {
+  background-color: #FFCD00 !important;
+}
+
+.modern-homepage [style*="--mood-stressed"] {
+  background-color: #E0301E !important;
+}
+
+/* Chat History in Sidebar */
+.modern-homepage .space-y-3.max-h-\[300px\] {
+  scrollbar-width: thin;
+  scrollbar-color: #86BC25 #f0f0f0;
+}
+
+.modern-homepage .space-y-3.max-h-\[300px\]::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modern-homepage .space-y-3.max-h-\[300px\]::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.modern-homepage .space-y-3.max-h-\[300px\]::-webkit-scrollbar-thumb {
+  background-color: #86BC25;
+  border-radius: 10px;
+}
+
+/* Chat message styling */
+.modern-homepage .p-3.rounded-lg.bg-muted\/40 {
+  border-left: 3px solid #86BC25;
+  transition: transform 0.2s ease;
+}
+
+.modern-homepage .p-3.rounded-lg.bg-muted\/40:hover {
+  transform: translateX(2px);
+}
+
+/* Chat message container sizing and wrapping */
+.max-w-2xl {
+  max-width: 85% !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Message parent container styles */
+.flex.justify-end, .flex.justify-start {
+  width: 100%;
+  padding: 0 4px;
+}
+
+/* Chat message content text styles to ensure proper wrapping */
+.rounded-lg.p-4 p {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Updated chat message container styles - more restrictive width */
+.max-w-2xl {
+  max-width: 70% !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: auto !important;
+  overflow: hidden;
+}
+
+/* Force message wrapping */
+.rounded-lg.p-4 {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Chat container styles - enforce visible area constraints */
+.flex-1.overflow-y-auto.p-4.overflow-x-hidden {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  padding: 16px 8px !important;
+}
+
+/* Message spacing in container */
+.space-y-6.w-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Bot response styling for all bot messages */
+.modern-homepage .flex-1.overflow-y-auto.p-4.space-y-4 > div:first-of-type + div + div .bg-muted {
+  background-color: rgba(255, 205, 0, 0.1);
+  border-left: 3px solid #FFCD00;
+  font-weight: 500;
+}
+
+/* VibeSence Bot welcome message container styling */
+.bg-muted p.welcome-message {
+  position: relative;
+  display: inline-block;
+}
+
+.bg-muted p.welcome-message:after {
+  content: '✓';
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 12px;
+  color: #767676;
+}
+
+/* Style for the welcome message specifically */
+.welcome-message {
+  color: #000000;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Default bot message text styling */
+.modern-homepage .bg-muted p {
+  font-weight: 400;
+}
+
+.modern-homepage .bg-muted p:first-child {
+  font-weight: 500;
+}
+
+/* Question at the top styling - make it more prominent */
+.modern-homepage .flex-1.overflow-y-auto.p-4.space-y-4 > div:first-of-type + div {
+  background-color: rgba(134, 188, 37, 0.05);
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-left: 4px solid #86BC25;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Bottom input form - make it more visible and user-friendly */
+.modern-homepage .p-4.border-t.border-border.mt-auto {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(134, 188, 37, 0.2);
+  padding: 16px;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Improve textarea appearance */
+.modern-homepage textarea.flex-1.min-h-\[40px\] {
+  background-color: white;
+  border: 1px solid rgba(134, 188, 37, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  padding: 12px;
+  font-size: 14px;
+}
+
+.modern-homepage textarea.flex-1.min-h-\[40px\]:focus {
+  border-color: #86BC25;
+  box-shadow: 0 0 0 2px rgba(134, 188, 37, 0.2);
+}
+
+/* Header title styling for chat question */
+h1.text-xl.font-semibold {
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 40px);
+  transition: all 0.3s ease;
+}
+
+h1.text-xl.font-semibold:hover {
+  color: #000;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 640px) {
+  .max-w-2xl {
+    max-width: 95% !important;
+  }
+  
+  .rounded-lg.p-4 {
+    padding: 12px;
+  }
+  
+  h1.text-xl.font-semibold {
+    font-size: 16px;
+    max-width: calc(100% - 30px);
+  }
+  
+  /* Smaller padding on smaller screens */
+  .flex-1.overflow-y-auto.p-4 {
+    padding: 8px;
+  }
+  
+  /* More compact spacing for messages */
+  .space-y-6 {
+    margin-top: 8px;
+    gap: 10px;
+  }
+}
+
+/* Custom wrapping classes */
+.text-wrapping-container {
+  max-width: 70% !important;
+  width: auto !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.break-words {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow: hidden;
+}
+
+/* Message container with fixed height */
+.message-container {
+  max-height: calc(100vh - 200px);
+  min-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Chat container styles - enforce visible area constraints */
+.flex-1.overflow-y-auto.p-4.overflow-x-hidden {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  padding: 16px 8px !important;
+}
+
+/* Message input styling */
+.modern-homepage textarea.resize-none {
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.modern-homepage textarea.resize-none:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(134, 188, 37, 0.2);
+}
+
+/* Button hover effects */
+.modern-homepage button.absolute.right-2 {
+  transition: all 0.2s ease;
+}
+
+.modern-homepage button.absolute.right-2:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modern-homepage button.absolute.right-2:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
+} 

@@ -1,0 +1,184 @@
+{
+  "tree_name": "Recognition Imbalance Assessment",
+  "root_question": {
+    "question_id": "D.8",
+    "question_text": "Considering all my efforts and achievements, I receive the praise and respect that my work deserves",
+    "answer_options": [
+      "1. Strongly agree",
+      "2. Agree",
+      "3. Neither agree nor disagree",
+      "4. Disagree",
+      "5. Strongly disagree"
+    ],
+    "branches": [
+      {
+        "if_answers": ["4. Disagree", "5. Strongly disagree"],
+        "next_question": {
+          "question_id": "D.10",
+          "question_text": "How often do you achieve the important work goals you have set for yourself?",
+          "answer_options": [
+            "1. 1-3 (Never/Rarely)",
+            "2. 4-7 (Sometimes)",
+            "3. 8-10 (Almost Always/Always)"
+          ],
+          "branches": [
+            {
+              "if_answers": ["1. 1-3 (Never/Rarely)"],
+              "next_question": {
+                "question_id": "D.7",
+                "question_text": "The organisation I work for motivates me to give my best job performance",
+                "answer_options": [
+                  "1. Strongly agree",
+                  "2. Agree",
+                  "3. Neither agree nor disagree",
+                  "4. Disagree",
+                  "5. Strongly disagree"
+                ],
+                "branches": [
+                  {
+                    "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                    "next_question": {
+                      "question_id": "D.1",
+                      "question_text": "I find that my values and the organisation's values are very similar",
+                      "answer_options": [
+                        "1. Strongly agree",
+                        "2. Agree",
+                        "3. Neither agree nor disagree",
+                        "4. Disagree",
+                        "5. Strongly disagree"
+                      ],
+                      "branches": [
+                        {
+                          "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                          "outcome": "Severe recognition imbalance with value misalignment and low motivation"
+                        },
+                        {
+                          "if_answers": ["3. Neither agree nor disagree"],
+                          "outcome": "Significant recognition imbalance with neutral value alignment and low motivation"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "if_answers": ["3. Neither agree nor disagree"],
+                    "outcome": "Moderate recognition imbalance with neutral organizational motivation"
+                  }
+                ]
+              }
+            },
+            {
+              "if_answers": ["2. 4-7 (Sometimes)", "3. 8-10 (Almost Always/Always)"],
+              "next_question": {
+                "question_id": "H.4",
+                "question_text": "Your immediate boss gives you praise and recognition when you do a good job",
+                "answer_options": [
+                  "1. Strongly agree",
+                  "2. Agree",
+                  "3. Neither agree nor disagree",
+                  "4. Disagree",
+                  "5. Strongly disagree"
+                ],
+                "branches": [
+                  {
+                    "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                    "outcome": "Recognition imbalance primarily from management despite personal achievement"
+                  },
+                  {
+                    "if_answers": ["3. Neither agree nor disagree"],
+                    "outcome": "Moderate recognition imbalance with inconsistent management acknowledgment"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "if_answers": ["3. Neither agree nor disagree"],
+        "next_question": {
+          "question_id": "H.4",
+          "question_text": "Your immediate boss gives you praise and recognition when you do a good job",
+          "answer_options": [
+            "1. Strongly agree",
+            "2. Agree",
+            "3. Neither agree nor disagree",
+            "4. Disagree",
+            "5. Strongly disagree"
+          ],
+          "branches": [
+            {
+              "if_answers": ["4. Disagree", "5. Strongly disagree"],
+              "outcome": "Recognition imbalance primarily from direct management"
+            },
+            {
+              "if_answers": ["3. Neither agree nor disagree", "2. Agree", "1. Strongly agree"],
+              "next_question": {
+                "question_id": "F.10",
+                "question_text": "In my current job I have enough opportunity to use the knowledge and skills that I have",
+                "answer_options": [
+                  "1. Strongly agree",
+                  "2. Agree",
+                  "3. Neither agree nor disagree",
+                  "4. Disagree",
+                  "5. Strongly disagree"
+                ],
+                "branches": [
+                  {
+                    "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                    "outcome": "Recognition imbalance related to skills underutilization"
+                  },
+                  {
+                    "if_answers": ["3. Neither agree nor disagree", "2. Agree", "1. Strongly agree"],
+                    "next_question": {
+                      "question_id": "I.10",
+                      "question_text": "And how satisfied are you with the balance between the time you spend on your paid work and the time you spend on other aspects of your life?",
+                      "answer_options": [
+                        "1. 1-3 (Extremely dissatisfied)",
+                        "2. 4-7 (Moderately satisfied)",
+                        "3. 8-10 (Extremely satisfied)"
+                      ],
+                      "branches": [
+                        {
+                          "if_answers": ["1. 1-3 (Extremely dissatisfied)"],
+                          "outcome": "Recognition imbalance with work-life balance concerns"
+                        },
+                        {
+                          "if_answers": ["2. 4-7 (Moderately satisfied)", "3. 8-10 (Extremely satisfied)"],
+                          "outcome": "Mild recognition imbalance with generally positive work conditions"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "if_answers": ["1. Strongly agree", "2. Agree"],
+        "next_question": {
+          "question_id": "A.4",
+          "question_text": "How dissatisfied or satisfied are you with your present job overall?",
+          "answer_options": [
+            "1. Completely satisfied",
+            "2. Mostly satisfied",
+            "3. Neither satisfied nor dissatisfied",
+            "4. Mostly dissatisfied",
+            "5. Completely dissatisfied"
+          ],
+          "branches": [
+            {
+              "if_answers": ["1. Completely satisfied", "2. Mostly satisfied"],
+              "outcome": "Positive recognition balance with high job satisfaction"
+            },
+            {
+              "if_answers": ["3. Neither satisfied nor dissatisfied", "4. Mostly dissatisfied", "5. Completely dissatisfied"],
+              "outcome": "Mixed recognition perception with other job satisfaction issues"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

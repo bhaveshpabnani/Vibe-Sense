@@ -1,0 +1,915 @@
+{
+    "tree_name": "Performance Effort Misalignment Assessment",
+    "root_question": {
+      "question_id": "D.8",
+      "question_text": "Considering all my efforts and achievements, I receive the praise and respect that my work deserves",
+      "answer_options": [
+        "1. Strongly agree",
+        "2. Agree", 
+        "3. Neither agree nor disagree", 
+        "4. Disagree", 
+        "5. Strongly disagree"
+      ],
+      "branches": [
+        {
+          "if_answers": ["5. Strongly disagree"],
+          "next_question": {
+            "question_id": "K.1",
+            "question_text": "Considering all my efforts and achievements in my job, I feel I get paid appropriately",
+            "answer_options": [
+              "1. Strongly agree",
+              "2. Tend to agree",
+              "3. Neither agree nor disagree",
+              "4. Disagree",
+              "5. Strongly disagree"
+            ],
+            "branches": [
+              {
+                "if_answers": ["5. Strongly disagree"],
+                "next_question": {
+                  "question_id": "D.7",
+                  "question_text": "The organisation I work for motivates me to give my best job performance",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["5. Strongly disagree"],
+                      "next_question": {
+                        "question_id": "H.4",
+                        "question_text": "Your immediate boss gives you praise and recognition when you do a good job",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["5. Strongly disagree"],
+                            "next_question": {
+                              "question_id": "H.11",
+                              "question_text": "You are treated fairly at your workplace",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Rarely"],
+                                  "next_question": {
+                                    "question_id": "H.12",
+                                    "question_text": "Over the past 12 months, during the course of your work, have you been subjected to bullying or harassment?",
+                                    "answer_options": [
+                                      "1. Yes",
+                                      "2. No"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["1. Yes"],
+                                        "outcome": "High risk of performance-effort misalignment due to workplace mistreatment"
+                                      },
+                                      {
+                                        "if_answers": ["2. No"],
+                                        "outcome": "Performance-effort misalignment primarily due to lack of recognition and fair treatment"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["5. Never"],
+                                  "next_question": {
+                                    "question_id": "F.10",
+                                    "question_text": "In my current job I have enough opportunity to use the knowledge and skills that I have",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Strongly disagree"],
+                                        "outcome": "Performance-effort misalignment due to skills underutilization and unfair treatment"
+                                      },
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment primarily due to unfair treatment and skills underutilization"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["3. Sometimes"],
+                                  "next_question": {
+                                    "question_id": "E.1",
+                                    "question_text": "My job offers good opportunities for career advancement",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Strongly disagree"],
+                                        "outcome": "Performance-effort misalignment due to lack of career growth despite occasional fair treatment"
+                                      },
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment with limited career advancement opportunities"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["4. Disagree"],
+                            "next_question": {
+                              "question_id": "H.6",
+                              "question_text": "Your immediate boss encourages and supports your development",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["5. Strongly disagree"],
+                                  "next_question": {
+                                    "question_id": "F.8",
+                                    "question_text": "I am able to access the right learning and development opportunities when I need to",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Strongly disagree"],
+                                        "outcome": "Performance-effort misalignment due to lack of development support"
+                                      },
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment with limited development opportunities"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["4. Disagree"],
+                                  "next_question": {
+                                    "question_id": "H.5",
+                                    "question_text": "Your immediate boss provides useful feedback on your work",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Strongly disagree"],
+                                        "outcome": "Performance-effort misalignment due to poor management feedback and limited development support"
+                                      },
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment with inadequate feedback and development support"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["4. Disagree"],
+                      "next_question": {
+                        "question_id": "D.10",
+                        "question_text": "How often do you achieve the important work goals you have set for yourself?",
+                        "answer_options": [
+                          "1. 9-10 (on 1-10 scale)",
+                          "2. 7-8 (on 1-10 scale)",
+                          "3. 4-7 (on 1-10 scale)",
+                          "4. 1-3 (on 1-10 scale)"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. 1-3 (on 1-10 scale)"],
+                            "next_question": {
+                              "question_id": "G.1",
+                              "question_text": "I have an acceptable workload",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["5. Strongly disagree"],
+                                  "next_question": {
+                                    "question_id": "G.3",
+                                    "question_text": "You have enough time to get the job done",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Never"],
+                                        "outcome": "Performance-effort misalignment due to excessive workload preventing goal achievement"
+                                      },
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment with workload barriers to success"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["4. Disagree"],
+                                  "next_question": {
+                                    "question_id": "F.3",
+                                    "question_text": "You can influence decisions that are important for your work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Never"],
+                                        "outcome": "Performance-effort misalignment due to lack of autonomy and high workload"
+                                      },
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment with limited decision influence and demanding workload"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["3. 4-7 (on 1-10 scale)"],
+                            "next_question": {
+                              "question_id": "F.1",
+                              "question_text": "You are able to apply your own ideas in your work",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Rarely"],
+                                  "next_question": {
+                                    "question_id": "F.2",
+                                    "question_text": "You are consulted before objectives are set for your work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Never"],
+                                        "outcome": "Performance-effort misalignment due to lack of input into work objectives and limited creativity"
+                                      },
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment with restricted creative input and consultation"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["5. Never"],
+                                  "next_question": {
+                                    "question_id": "D.5",
+                                    "question_text": "You know what is expected of you at work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment due to unclear expectations and lack of autonomy"
+                                      },
+                                      {
+                                        "if_answers": ["3. Sometimes"],
+                                        "outcome": "Performance-effort misalignment with inconsistent role clarity and limited autonomy"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answers": ["4. Disagree"],
+                "next_question": {
+                  "question_id": "A.4",
+                  "question_text": "How dissatisfied or satisfied are you with your present job overall?",
+                  "answer_options": [
+                    "1. Completely satisfied",
+                    "2. Very satisfied",
+                    "3. Fairly satisfied",
+                    "4. Neither satisfied nor dissatisfied",
+                    "5. Fairly dissatisfied",
+                    "6. Very dissatisfied",
+                    "7. Completely dissatisfied"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["7. Completely dissatisfied"],
+                      "next_question": {
+                        "question_id": "E.1",
+                        "question_text": "My job offers good opportunities for career advancement",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["5. Strongly disagree"],
+                            "next_question": {
+                              "question_id": "F.9",
+                              "question_text": "I am sufficiently challenged by my work",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["5. Strongly disagree"],
+                                  "next_question": {
+                                    "question_id": "F.10",
+                                    "question_text": "In my current job I have enough opportunity to use the knowledge and skills that I have",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Strongly disagree"],
+                                        "outcome": "Performance-effort misalignment due to unchallenging work without advancement opportunities"
+                                      },
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment with underutilization of skills and limited growth potential"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["4. Disagree"],
+                                  "next_question": {
+                                    "question_id": "D.11",
+                                    "question_text": "You have the feeling of doing useful work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment due to lack of meaningful work and advancement opportunities"
+                                      },
+                                      {
+                                        "if_answers": ["3. Sometimes"],
+                                        "outcome": "Performance-effort misalignment with occasional sense of purpose but limited growth"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["4. Disagree"],
+                            "next_question": {
+                              "question_id": "K.3",
+                              "question_text": "How well would you say you yourself are managing financially these days?",
+                              "answer_options": [
+                                "1. Living comfortably",
+                                "2. Doing alright",
+                                "3. Just about getting by",
+                                "4. Finding it quite difficult",
+                                "5. Finding it very difficult"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["5. Finding it very difficult"],
+                                  "next_question": {
+                                    "question_id": "K.4",
+                                    "question_text": "How would you pay an unexpected bill of £300?",
+                                    "answer_options": [
+                                      "1. I could pay it from my regular income",
+                                      "2. I could pay it from my savings",
+                                      "3. I would need to borrow from family/friends",
+                                      "4. I would go overdrawn without authorisation",
+                                      "5. I couldn't pay this bill"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. I couldn't pay this bill"],
+                                        "outcome": "Performance-effort misalignment with severe financial stress despite efforts"
+                                      },
+                                      {
+                                        "if_answers": ["4. I would go overdrawn without authorisation"],
+                                        "outcome": "Performance-effort misalignment with financial hardship and inadequate compensation"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["4. Finding it quite difficult"],
+                                  "next_question": {
+                                    "question_id": "K.2",
+                                    "question_text": "How confident are you that you will have enough money for your standard of living in a year?",
+                                    "answer_options": [
+                                      "1. Very confident",
+                                      "2. Fairly confident",
+                                      "3. Neither confident nor not confident",
+                                      "4. Not very confident",
+                                      "5. Not confident at all"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Not confident at all"],
+                                        "outcome": "Performance-effort misalignment with financial insecurity and inadequate compensation"
+                                      },
+                                      {
+                                        "if_answers": ["4. Not very confident"],
+                                        "outcome": "Performance-effort misalignment with financial concerns and limited advancement"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["6. Very dissatisfied", "5. Fairly dissatisfied"],
+                      "next_question": {
+                        "question_id": "I.10",
+                        "question_text": "How satisfied are you with the balance between the time you spend on your paid work and other aspects of your life?",
+                        "answer_options": [
+                          "1. 9-10 (on 1-10 scale)",
+                          "2. 6-8 (on 1-10 scale)",
+                          "3. 4-5 (on 1-10 scale)",
+                          "4. 1-3 (on 1-10 scale)"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. 1-3 (on 1-10 scale)"],
+                            "next_question": {
+                              "question_id": "I.6",
+                              "question_text": "How often have you worked in your free time to meet work demands?",
+                              "answer_options": [
+                                "1. Never",
+                                "2. Less often",
+                                "3. Several times a month",
+                                "4. Several times a week",
+                                "5. Daily"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["5. Daily"],
+                                  "next_question": {
+                                    "question_id": "I.7",
+                                    "question_text": "After I leave my work I keep worrying about job problems",
+                                    "answer_options": [
+                                      "1. Never",
+                                      "2. Rarely",
+                                      "3. Sometimes",
+                                      "4. Most of the time",
+                                      "5. All of the time"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. All of the time"],
+                                        "outcome": "Performance-effort misalignment due to poor work-life balance and constant work stress"
+                                      },
+                                      {
+                                        "if_answers": ["4. Most of the time"],
+                                        "outcome": "Performance-effort misalignment with work encroaching on personal time without adequate compensation"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["4. Several times a week"],
+                                  "next_question": {
+                                    "question_id": "I.9",
+                                    "question_text": "How often do you feel too tired after work to enjoy the things you would like to do at home?",
+                                    "answer_options": [
+                                      "1. Never",
+                                      "2. Rarely",
+                                      "3. Sometimes",
+                                      "4. Often",
+                                      "5. Always"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["5. Always"],
+                                        "outcome": "Performance-effort misalignment with work fatigue impacting personal life without proper reward"
+                                      },
+                                      {
+                                        "if_answers": ["4. Often"],
+                                        "outcome": "Performance-effort misalignment with work demands depleting energy for personal life"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["3. 4-5 (on 1-10 scale)"],
+                            "next_question": {
+                              "question_id": "D.9",
+                              "question_text": "Your job gives you the feeling of work well done",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Rarely"],
+                                  "next_question": {
+                                    "question_id": "D.6",
+                                    "question_text": "To what extent do you generally feel that you have a sense of direction in your work?",
+                                    "answer_options": [
+                                      "1. 9-10 (on 1-10 scale)",
+                                      "2. 6-8 (on 1-10 scale)",
+                                      "3. 4-5 (on 1-10 scale)",
+                                      "4. 1-3 (on 1-10 scale)"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. 1-3 (on 1-10 scale)"],
+                                        "outcome": "Performance-effort misalignment due to lack of accomplishment and direction"
+                                      },
+                                      {
+                                        "if_answers": ["3. 4-5 (on 1-10 scale)"],
+                                        "outcome": "Performance-effort misalignment with limited sense of achievement and direction"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["3. Sometimes"],
+                                  "next_question": {
+                                    "question_id": "H.3",
+                                    "question_text": "Your immediate boss respects you as a person",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment with occasional job satisfaction but lack of respect"
+                                      },
+                                      {
+                                        "if_answers": ["3. Neither agree nor disagree"],
+                                        "outcome": "Performance-effort misalignment with inconsistent recognition and neutral management respect"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_answers": ["4. Disagree"],
+          "next_question": {
+            "question_id": "D.11",
+            "question_text": "You have the feeling of doing useful work",
+            "answer_options": [
+              "1. Always",
+              "2. Most of the time",
+              "3. Sometimes",
+              "4. Rarely",
+              "5. Never"
+            ],
+            "branches": [
+              {
+                "if_answers": ["3. Sometimes"],
+                "next_question": {
+                  "question_id": "D.9",
+                  "question_text": "Your job gives you the feeling of work well done",
+                  "answer_options": [
+                    "1. Always",
+                    "2. Most of the time",
+                    "3. Sometimes",
+                    "4. Rarely",
+                    "5. Never"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["3. Sometimes"],
+                      "next_question": {
+                        "question_id": "H.4",
+                        "question_text": "Your immediate boss gives you praise and recognition when you do a good job",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["3. Neither agree nor disagree"],
+                            "next_question": {
+                              "question_id": "D.4",
+                              "question_text": "I understand how my work contributes to my organisation's objectives",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree"],
+                                  "next_question": {
+                                    "question_id": "D.6",
+                                    "question_text": "To what extent do you generally feel that you have a sense of direction in your work?",
+                                    "answer_options": [
+                                      "1. 9-10 (on 1-10 scale)",
+                                      "2. 7-8 (on 1-10 scale)",
+                                      "3. 5-7 (on 1-10 scale)",
+                                      "4. 4-6 (on 1-10 scale)"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. 4-6 (on 1-10 scale)"],
+                                        "outcome": "Moderate performance-effort misalignment with unclear contribution value"
+                                      },
+                                      {
+                                        "if_answers": ["3. 5-7 (on 1-10 scale)"],
+                                        "outcome": "Mild performance-effort misalignment with inconsistent sense of purpose"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["4. Disagree"],
+                                  "next_question": {
+                                    "question_id": "D.5",
+                                    "question_text": "You know what is expected of you at work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["3. Sometimes"],
+                                        "outcome": "Performance-effort misalignment with unclear expectations and organizational connection"
+                                      },
+                                      {
+                                        "if_answers": ["2. Most of the time"],
+                                        "outcome": "Mixed performance-effort alignment with clear expectations but unclear organizational impact"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["4. Disagree"],
+                            "next_question": {
+                              "question_id": "H.3",
+                              "question_text": "Your immediate boss respects you as a person",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree"],
+                                  "next_question": {
+                                    "question_id": "H.5",
+                                    "question_text": "Your immediate boss provides useful feedback on your work",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment due to inadequate feedback and neutral respect"
+                                      },
+                                      {
+                                        "if_answers": ["3. Neither agree nor disagree"],
+                                        "outcome": "Performance-effort misalignment with inconsistent management support"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["2. Agree"],
+                                  "next_question": {
+                                    "question_id": "H.6",
+                                    "question_text": "Your immediate boss encourages and supports your development",
+                                    "answer_options": [
+                                      "1. Strongly agree",
+                                      "2. Agree",
+                                      "3. Neither agree nor disagree",
+                                      "4. Disagree",
+                                      "5. Strongly disagree"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["3. Neither agree nor disagree"],
+                                        "outcome": "Mixed performance-effort alignment with personal respect but limited recognition"
+                                      },
+                                      {
+                                        "if_answers": ["4. Disagree"],
+                                        "outcome": "Performance-effort misalignment with respect but insufficient development support"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["4. Rarely"],
+                      "next_question": {
+                        "question_id": "F.10",
+                        "question_text": "In my current job I have enough opportunity to use the knowledge and skills that I have",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. Disagree"],
+                            "next_question": {
+                              "question_id": "F.9",
+                              "question_text": "I am sufficiently challenged by my work",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["4. Disagree"],
+                                  "next_question": {
+                                    "question_id": "F.1",
+                                    "question_text": "You are able to apply your own ideas in your work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment due to unchallenging work and skills underutilization"
+                                      },
+                                      {
+                                        "if_answers": ["3. Sometimes"],
+                                        "outcome": "Performance-effort misalignment with limited opportunities for creativity and challenge"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree"],
+                                  "next_question": {
+                                    "question_id": "F.3",
+                                    "question_text": "You can influence decisions that are important for your work",
+                                    "answer_options": [
+                                      "1. Always",
+                                      "2. Most of the time",
+                                      "3. Sometimes",
+                                      "4. Rarely",
+                                      "5. Never"
+                                    ],
+                                    "branches": [
+                                      {
+                                        "if_answers": ["4. Rarely"],
+                                        "outcome": "Performance-effort misalignment with limited decision influence and skills application"
+                                      },
+                                      {
+                                        "if_answers": ["3. Sometimes"],
+                                        "outcome": "Mixed performance-effort alignment with occasional autonomy but skills underutilization"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

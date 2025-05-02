@@ -1,0 +1,284 @@
+{
+    "tree_name": "Career Progression Stagnation Assessment",
+    "root_question": {
+      "question_id": "E.1",
+      "question_text": "My job offers good opportunities for career advancement",
+      "answer_options": [
+        "1. Strongly agree",
+        "2. Agree",
+        "3. Neither agree nor disagree",
+        "4. Disagree",
+        "5. Strongly disagree"
+      ],
+      "branches": [
+        {
+          "if_answers": ["4. Disagree", "5. Strongly disagree"],
+          "next_question": {
+            "question_id": "F.8",
+            "question_text": "I am able to access the right learning and development opportunities when I need to",
+            "answer_options": [
+              "1. Strongly agree",
+              "2. Agree",
+              "3. Neither agree nor disagree",
+              "4. Disagree",
+              "5. Strongly disagree"
+            ],
+            "branches": [
+              {
+                "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                "next_question": {
+                  "question_id": "F.6",
+                  "question_text": "Over the past 12 months, have you received any training paid for or provided by your employer?",
+                  "answer_options": [
+                    "Yes",
+                    "No",
+                    "Don't know"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["No"],
+                      "next_question": {
+                        "question_id": "F.10",
+                        "question_text": "In my current job I have enough opportunity to use the knowledge and skills that I have",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                            "next_question": {
+                              "question_id": "NA.1",
+                              "question_text": "I believe my skills and talents are being underutilized in my current role",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["1. Strongly agree", "2. Agree"],
+                                  "outcome": "Severe Career Stagnation: Employee faces significant barriers to growth with no training, skill underutilization, and talent mismatch. Immediate intervention required through career mapping, skill development plan, and potential role reassessment."
+                                },
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree", "4. Disagree", "5. Strongly disagree"],
+                                  "outcome": "Moderate Career Stagnation: Employee lacks advancement opportunities and training despite being in an appropriate role. Focus on creating development plan and providing training opportunities."
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                            "next_question": {
+                              "question_id": "NA.2",
+                              "question_text": "I have expressed interest in advancement opportunities but feel my requests have been overlooked",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["1. Strongly agree", "2. Agree"],
+                                  "outcome": "Communication Gap Stagnation: Employee has skills but lacks advancement despite interest. Focus on improving management communication and creating transparent advancement pathways."
+                                },
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree", "4. Disagree", "5. Strongly disagree"],
+                                  "outcome": "Early-Stage Stagnation: Employee has appropriate skill utilization but lacks training and advancement opportunities. Implement regular career discussions and identify potential growth paths."
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answers": ["Yes", "Don't know"],
+                      "next_question": {
+                        "question_id": "H.6",
+                        "question_text": "Your immediate boss encourages and supports your development",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                            "outcome": "Management-Related Stagnation: Despite some training, employee lacks effective management support for career development. Focus on manager coaching and creating alternative mentorship opportunities."
+                          },
+                          {
+                            "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                            "next_question": {
+                              "question_id": "NA.3",
+                              "question_text": "The training I've received has been relevant to my career goals",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ],
+                              "branches": [
+                                {
+                                  "if_answers": ["1. Strongly agree", "2. Agree"],
+                                  "outcome": "Structural Stagnation: Employee has supportive management and relevant training but lacks formal advancement opportunities. Focus on creating advancement pathways and cross-departmental opportunities."
+                                },
+                                {
+                                  "if_answers": ["3. Neither agree nor disagree", "4. Disagree", "5. Strongly disagree"],
+                                  "outcome": "Misaligned Development Stagnation: Training exists but doesn't align with employee's career goals. Create personalized development plan aligned with both organizational needs and employee aspirations."
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                "next_question": {
+                  "question_id": "D.8",
+                  "question_text": "Considering all my efforts and achievements, I receive the praise and respect that my work deserves",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree",
+                    "Don't know"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["4. Disagree", "5. Strongly disagree", "Don't know"],
+                      "outcome": "Recognition-Related Stagnation: Employee has access to development but lacks recognition for achievements. Implement formal recognition systems and ensure achievements are acknowledged in advancement considerations."
+                    },
+                    {
+                      "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                      "next_question": {
+                        "question_id": "NA.4",
+                        "question_text": "I understand what I need to do to advance my career in this organization",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["1. Strongly agree", "2. Agree"],
+                            "outcome": "Perception Mismatch: Employee perceives limited advancement despite having development opportunities, recognition, and understanding of path forward. Clarify advancement timelines and organizational constraints."
+                          },
+                          {
+                            "if_answers": ["3. Neither agree nor disagree", "4. Disagree", "5. Strongly disagree"],
+                            "outcome": "Transparency Gap Stagnation: Employee has development opportunities and recognition but lacks clear understanding of advancement criteria. Create transparent promotion criteria and career pathing documentation."
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+          "next_question": {
+            "question_id": "F.3",
+            "question_text": "You can influence decisions that are important for your work",
+            "answer_options": [
+              "1. Always",
+              "2. Most of the time",
+              "3. Sometimes",
+              "4. Rarely",
+              "5. Never",
+              "Don't know"
+            ],
+            "branches": [
+              {
+                "if_answers": ["4. Rarely", "5. Never", "Don't know"],
+                "next_question": {
+                  "question_id": "NA.5",
+                  "question_text": "I feel empowered to take initiative in my role",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                      "outcome": "Authority-Limitation Stagnation: Employee sees advancement potential but lacks decision-making authority despite feeling empowered. Focus on increasing autonomy through delegated projects."
+                    },
+                    {
+                      "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                      "outcome": "Empowerment-Deficit Stagnation: Employee sees advancement potential but feels disempowered and unable to influence decisions. Address management style and implement empowerment initiatives."
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answers": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                "next_question": {
+                  "question_id": "G.1",
+                  "question_text": "I have an acceptable workload",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree"
+                  ],
+                  "branches": [
+                    {
+                      "if_answers": ["4. Disagree", "5. Strongly disagree"],
+                      "outcome": "Bandwidth-Limited Stagnation: Employee has advancement opportunities and influence but excessive workload prevents focus on development. Address workload distribution and create protected development time."
+                    },
+                    {
+                      "if_answers": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                      "next_question": {
+                        "question_id": "NA.6",
+                        "question_text": "I have a clear understanding of my next career steps in this organization",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answers": ["1. Strongly agree", "2. Agree"],
+                            "outcome": "Optimal Career Environment: Employee has advancement opportunities, influence, manageable workload, and clear career path understanding. Continue supporting through regular career check-ins."
+                          },
+                          {
+                            "if_answers": ["3. Neither agree nor disagree", "4. Disagree", "5. Strongly disagree"],
+                            "outcome": "Path Clarity Gap: Employee has positive conditions but lacks clear understanding of specific next steps. Implement detailed career mapping and milestone planning."
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

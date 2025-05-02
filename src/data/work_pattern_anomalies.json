@@ -1,0 +1,468 @@
+{
+    "tree_name": "Work Pattern Anomalies",
+    "root_question": {
+      "question_id": "I.6",
+      "question_text": "Over the last 12 months, how often have you worked in your free time to meet work demands?",
+      "answer_options": [
+        "1. Daily",
+        "2. Several times a week",
+        "3. Several times a month",
+        "4. Less often",
+        "5. Never",
+        "Don't know"
+      ],
+      "branches": [
+        {
+          "if_answered": ["1. Daily", "2. Several times a week"],
+          "next_question": {
+            "question_id": "I.7",
+            "question_text": "After I leave my work I keep worrying about job problems",
+            "answer_options": [
+              "1. Never",
+              "2. Occasionally",
+              "3. Some of the time",
+              "4. Much of the time",
+              "5. Most of the time",
+              "6. All of the time",
+              "Don't know"
+            ],
+            "branches": [
+              {
+                "if_answered": ["4. Much of the time", "5. Most of the time", "6. All of the time"],
+                "next_question": {
+                  "question_id": "G.1",
+                  "question_text": "I have an acceptable workload",
+                  "answer_options": [
+                    "1. Strongly agree",
+                    "2. Agree",
+                    "3. Neither agree nor disagree",
+                    "4. Disagree",
+                    "5. Strongly disagree"
+                  ],
+                  "branches": [
+                    {
+                      "if_answered": ["4. Disagree", "5. Strongly disagree"],
+                      "next_question": {
+                        "question_id": "G.3",
+                        "question_text": "You have enough time to get the job done",
+                        "answer_options": [
+                          "1. Always", 
+                          "2. Most of the time", 
+                          "3. Sometimes", 
+                          "4. Rarely", 
+                          "5. Never",
+                          "Don't know"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["4. Rarely", "5. Never"],
+                            "next_question": {
+                              "question_id": "F.3",
+                              "question_text": "You can influence decisions that are important for your work",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never",
+                                "Don't know"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                            "next_question": {
+                              "question_id": "G.2",
+                              "question_text": "Does your job involve working to tight deadlines",
+                              "answer_options": [
+                                "1. All of the time",
+                                "2. Almost all of the time",
+                                "3. Around ¾ of the time",
+                                "4. Around half of the time",
+                                "5. Around ¼ of the time",
+                                "6. Almost never",
+                                "7. Never",
+                                "Don't know"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answered": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                      "next_question": {
+                        "question_id": "H.2",
+                        "question_text": "Your manager helps and supports you",
+                        "answer_options": [
+                          "1. Always",
+                          "2. Most of the time",
+                          "3. Sometimes",
+                          "4. Rarely",
+                          "5. Never",
+                          "Don't know"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["4. Rarely", "5. Never"],
+                            "next_question": {
+                              "question_id": "H.6",
+                              "question_text": "Your immediate boss encourages and supports your development",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                            "next_question": {
+                              "question_id": "G.4",
+                              "question_text": "Your job requires that you hide your feelings",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never",
+                                "Don't know"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answered": ["1. Never", "2. Occasionally", "3. Some of the time"],
+                "next_question": {
+                  "question_id": "I.8",
+                  "question_text": "I find it difficult to unwind at the end of a workday",
+                  "answer_options": [
+                    "1. Never",
+                    "2. Occasionally",
+                    "3. Some of the time",
+                    "4. Much of the time",
+                    "5. Most of the time",
+                    "6. All of the time",
+                    "Don't know"
+                  ],
+                  "branches": [
+                    {
+                      "if_answered": ["4. Much of the time", "5. Most of the time", "6. All of the time"],
+                      "next_question": {
+                        "question_id": "I.9",
+                        "question_text": "How often do you feel too tired after work to enjoy the things you would like to do at home?",
+                        "answer_options": [
+                          "1. Never",
+                          "2. Hardly ever",
+                          "3. Sometimes",
+                          "4. Often",
+                          "5. Always",
+                          "Don't know"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["4. Often", "5. Always"],
+                            "next_question": {
+                              "question_id": "I.5",
+                              "question_text": "I take sufficient breaks throughout the working day (lunch, toilet, screen breaks etc). Breaks reduce the likelihood of eye strain, upper limb problems, backache and fatigue.",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never",
+                                "Don't know"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["1. Never", "2. Hardly ever", "3. Sometimes"],
+                            "next_question": {
+                              "question_id": "I.10",
+                              "question_text": "And how satisfied are you with the balance between the time you spend on your paid work and the time you spend on other aspects of your life?",
+                              "answer_options": [
+                                "Extremely dissatisfied 1 2 3 4 5 6 7 8 9 10 Extremely satisfied"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answered": ["1. Never", "2. Occasionally", "3. Some of the time"],
+                      "next_question": {
+                        "question_id": "E.3",
+                        "question_text": "I am expecting an undesirable change in my work situation.",
+                        "answer_options": [
+                          "1. Completely agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Completely disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["1. Completely agree", "2. Agree"],
+                            "next_question": {
+                              "question_id": "E.2",
+                              "question_text": "I might lose my job in the next 6 months",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["3. Neither agree nor disagree", "4. Disagree", "5. Completely disagree"],
+                            "next_question": {
+                              "question_id": "H.7",
+                              "question_text": "I feel that change is managed well in [my organisation]",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if_answered": ["3. Several times a month", "4. Less often", "5. Never"],
+          "next_question": {
+            "question_id": "I.2",
+            "question_text": "Would you say that arranging to take an hour or two off during working hours to take care of personal or family matters is...?",
+            "answer_options": [
+              "1. Very easy",
+              "2. Fairly easy",
+              "3. Fairly difficult",
+              "4. Very difficult",
+              "Don't know"
+            ],
+            "branches": [
+              {
+                "if_answered": ["3. Fairly difficult", "4. Very difficult"],
+                "next_question": {
+                  "question_id": "F.4",
+                  "question_text": "Are you able to choose or change your methods of work?",
+                  "answer_options": [
+                    "Yes",
+                    "No",
+                    "Don't know"
+                  ],
+                  "branches": [
+                    {
+                      "if_answered": ["No"],
+                      "next_question": {
+                        "question_id": "F.3",
+                        "question_text": "You can influence decisions that are important for your work",
+                        "answer_options": [
+                          "1. Always",
+                          "2. Most of the time",
+                          "3. Sometimes",
+                          "4. Rarely",
+                          "5. Never",
+                          "Don't know"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["4. Rarely", "5. Never"],
+                            "next_question": {
+                              "question_id": "F.2",
+                              "question_text": "You are consulted before objectives are set for your work",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never",
+                                "Don't know"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["1. Always", "2. Most of the time", "3. Sometimes"],
+                            "next_question": {
+                              "question_id": "I.3",
+                              "question_text": "Normally, how many times a month do you work at night, for at least 2 hours between 10:00pm and 05:00am?",
+                              "answer_options": [
+                                "1. 2-digit response [01-31]",
+                                "2. Never",
+                                "Don't know"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answered": ["Yes"],
+                      "next_question": {
+                        "question_id": "I.4",
+                        "question_text": "Normally, how many times a month do you work more than 10 hours a day?",
+                        "answer_options": [
+                          "1. 2-digit response [01-31]",
+                          "2. Never",
+                          "Don't know"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["1. 2-digit response [01-31]"],
+                            "next_question": {
+                              "question_id": "I.1",
+                              "question_text": "I am very stressed from my commute by the time I get to work.",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["2. Never"],
+                            "next_question": {
+                              "question_id": "I.10",
+                              "question_text": "And how satisfied are you with the balance between the time you spend on your paid work and the time you spend on other aspects of your life?",
+                              "answer_options": [
+                                "Extremely dissatisfied 1 2 3 4 5 6 7 8 9 10 Extremely satisfied"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "if_answered": ["1. Very easy", "2. Fairly easy"],
+                "next_question": {
+                  "question_id": "D.5",
+                  "question_text": "You know what is expected of you at work",
+                  "answer_options": [
+                    "1. Always",
+                    "2. Most of the time",
+                    "3. Sometimes",
+                    "4. Rarely",
+                    "5. Never",
+                    "Don't know"
+                  ],
+                  "branches": [
+                    {
+                      "if_answered": ["3. Sometimes", "4. Rarely", "5. Never"],
+                      "next_question": {
+                        "question_id": "D.3",
+                        "question_text": "I have a clear understanding of [my organisation's] objectives",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["4. Disagree", "5. Strongly disagree"],
+                            "next_question": {
+                              "question_id": "D.4",
+                              "question_text": "I understand how my work contributes to [my organisation's] objectives",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                            "next_question": {
+                              "question_id": "H.3",
+                              "question_text": "Your immediate boss respects you as a person",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "if_answered": ["1. Always", "2. Most of the time"],
+                      "next_question": {
+                        "question_id": "F.10",
+                        "question_text": "In my current job I have enough opportunity to use the knowledge and skills that I have",
+                        "answer_options": [
+                          "1. Strongly agree",
+                          "2. Agree",
+                          "3. Neither agree nor disagree",
+                          "4. Disagree",
+                          "5. Strongly disagree"
+                        ],
+                        "branches": [
+                          {
+                            "if_answered": ["4. Disagree", "5. Strongly disagree"],
+                            "next_question": {
+                              "question_id": "F.9",
+                              "question_text": "I am sufficiently challenged by my work",
+                              "answer_options": [
+                                "1. Strongly agree",
+                                "2. Agree",
+                                "3. Neither agree nor disagree",
+                                "4. Disagree",
+                                "5. Strongly disagree"
+                              ]
+                            }
+                          },
+                          {
+                            "if_answered": ["1. Strongly agree", "2. Agree", "3. Neither agree nor disagree"],
+                            "next_question": {
+                              "question_id": "D.11",
+                              "question_text": "You have the feeling of doing useful work",
+                              "answer_options": [
+                                "1. Always",
+                                "2. Most of the time",
+                                "3. Sometimes",
+                                "4. Rarely",
+                                "5. Never",
+                                "Don't know"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
